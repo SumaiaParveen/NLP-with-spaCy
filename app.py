@@ -8,6 +8,7 @@ import streamlit as st
 import pandas as pd
 
 # spaCy Packages
+import spacy_streamlit
 import spacy
 nlp = spacy.load('en_core_web_sm')
 
