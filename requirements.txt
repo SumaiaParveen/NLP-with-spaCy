@@ -2,4 +2,3 @@ streamlit>=0.62.0
 spacy>=2.3.0,<2.4.0
 spacy_streamlit
 pandas
-en_core_web_sm==2.3.1
