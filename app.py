@@ -10,7 +10,8 @@ import pandas as pd
 # spaCy Packages
 import spacy_streamlit
 import spacy
-nlp = spacy.load('en')
+import en_core_web_md
+nlp = spacy.load('en_core_web_sm')
 
 # Text preprocessing
 import re
