@@ -187,13 +187,13 @@ def main():
 
         # ------------------------------------- Named Entity Recognition -------------------------------------
 
-        elif choice == "Named Entity Recognition":
-            st.subheader("Named Entity Recognition")
+        elif choice == "Entity Recognition":
+            st.subheader("Entity Recognition")
             raw_text = st.text_area("Your Text","Enter Text Here")
             nlp = spacy.load('en_core_web_sm')
             docx = nlp(raw_text)
-            if st.button("NER"):
-                spacy_streamlit.visualize_ner(docx,labels=nlp.get_pipe('ner').labels)
+            if st.button("Entity Type"):
+                spacy_streamlit.visualize_ner(docx, labels=nlp.get_pipe('ner').labels)
 
         # ----------------------------------------------------------------------------------------------------
         # ------------------------------------- End of Word Count --------------------------------------------
@@ -314,12 +314,12 @@ def main():
             st.subheader("Summarize Document")
             raw_raw_text = st.text_area("Your Text","Enter Text Here")
             raw_text = raw_raw_text
-            summarizer_type = st.selectbox("Summarizer Type", ["Gensim", "Sumy Lex Rank", "Sumy Luhn", "Sumy Latent Semantic Analysis", "Sumy Text Rank"])
+            summarizer_type = st.selectbox("Select a Summarizer", ["Gensim", "Sumy Lex Rank", "Sumy Luhn", "Sumy Latent Semantic Analysis", "Sumy Text Rank"])
             if st.button('Summarize'):
                 if summarizer_type == "Gensim":
                     summary_result = summarize(raw_text)
                     st.subheader("Keywords")
-                    keyword = st.number_input("Enter the number of keywords and hit 'Summarize'.")                                
+                    keyword = st.number_input("Enter the number of keywords and hit the 'Summarize' button.")                                
                     kw = keywords(raw_text, words = keyword).split('\n')
                     st.write(kw)
                 elif summarizer_type == "Sumy Lex Rank":
@@ -356,11 +356,11 @@ def main():
                 st.write(summary_result)
                 
                 st.subheader("Some little details.")
-                st.write("The length of original document:", len_raw, "characters")
-                st.write("The length of the summary:", len_sum, "characters")
+                st.code("The length of original document:", len_raw, "characters")
+                st.code("The length of the summary:", len_sum, "characters")
 
-                st.write("Approximate required time to read original document:", rt_raw)
-                st.write("Approximate required time to read the summary:", rt_sum)
+                st.code("Approximate required time to read original document:", rt_raw)
+                st.code("Approximate required time to read the summary:", rt_sum)
                 
                 # WordCloud Generation
                 wc = WordCloud(background_color="white", colormap="Dark2", max_font_size=150, random_state=42)
