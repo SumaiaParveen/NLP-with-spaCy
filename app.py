@@ -122,7 +122,7 @@ def main():
 
     if choice == "Tokenization & Word Count":
         st.subheader("Tokenization & Word Count")
-        menu = ["Tokenization", "Word Count", "Named Entity Recognition"]
+        menu = ["Tokenization", "Word Count", "Entity Recognition"]
         choice = st.selectbox("Select", menu)
 
 
@@ -356,11 +356,11 @@ def main():
                 st.write(summary_result)
                 
                 st.subheader("Some little details.")
-                st.code("The length of original document:", len_raw, "characters")
-                st.code("The length of the summary:", len_sum, "characters")
+                st.write("The length of original document:", len_raw, "characters")
+                st.write("The length of the summary:", len_sum, "characters")
 
-                st.code("Approximate required time to read original document:", rt_raw)
-                st.code("Approximate required time to read the summary:", rt_sum)
+                st.write("Approximate required time to read original document:", rt_raw)
+                st.write("Approximate required time to read the summary:", rt_sum)
                 
                 # WordCloud Generation
                 wc = WordCloud(background_color="white", colormap="Dark2", max_font_size=150, random_state=42)
