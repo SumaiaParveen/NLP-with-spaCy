@@ -7,6 +7,10 @@ from PIL import Image
 import streamlit as st
 import pandas as pd
 
+# nltk Packages
+import nltk
+nltk.download('punkt')
+
 # spaCy Packages
 import spacy_streamlit
 import spacy
