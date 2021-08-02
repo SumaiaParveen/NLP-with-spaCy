@@ -10,6 +10,6 @@
 
 **Libraries and frameworks**: Pandas, Nltk, Spacy, spacy_streamlit, en_core_web_sm, Genism, Sumy, Sklearn, Wordcloud, Matplotlib, Unicode, Pillow, Streamlit, Heroku
 
-### [Go to the App](https://nlpwithspacy.herokuapp.com/)
+### [Go to the App](https://laaqipm25.herokuapp.com/)
 
-[![Watch Demo Here](https://github.com/SumaiaParveen/NLP-with-spaCy/blob/main/NLPwithspaCyJPG.JPG)](https://nlpwithspacy.herokuapp.com/)
+[![Watch Demo Here](https://github.com/SumaiaParveen/Regression-LA-AQI-Prediction/blob/main/AQI.JPG)](https://laaqipm25.herokuapp.com/)
